@@ -45,10 +45,9 @@ int main()
         my_Sales_data trans;
         while (cin >> trans.bookNo >> trans.units_sold >> trans.revenue)
         {
-            if (total.bookNo == trans.bookNo)
+            if (total.isbn() == trans.isbn())
             {
-                total.units_sold += trans.units_sold;
-                total.revenue += trans.revenue;
+                total.combine(trans);
             }
             else
             {
