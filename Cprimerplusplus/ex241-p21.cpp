@@ -10,19 +10,25 @@
 #include <iostream>
 using namespace std;
 
-
-
 struct my_Sales_data{
+    //构造函数
+    my_Sales_data()=default;//默认构造函数,将使用类内初值初始化数据成员
+    my_Sales_data(const string &s1,const string &s2):bookNo(s1),country(s2){};
+    my_Sales_data(const string &s1,const string &s2,unsigned n,double p):bookNo(s1),country(s2)
+                  ,units_sold(n),revenue(n*p){};
+    my_Sales_data(istream &);
     
+    //成员函数
     std::string isbn() const{return bookNo;};//这个函数的定义直接在大括号中
     my_Sales_data & combine(const my_Sales_data &rhs);
     double avg_price() const;
-    
+    //成员数据
     std::string country;
     std::string bookNo;
     unsigned units_sold=0;
     double revenue=0.0;
 };
+
 
 double my_Sales_data::avg_price()const{
     if(units_sold)
@@ -33,10 +39,15 @@ double my_Sales_data::avg_price()const{
 
 istream &read(istream &is,my_Sales_data &item)
 {
-    double price=0;
-    is>>item.country>>item.bookNo>>item.units_sold>>item.revenue;
+    int price;
+    is>>item.country>>item.bookNo>>item.units_sold>>price;
     item.revenue=price*item.units_sold;
     return is;
+}
+
+my_Sales_data::my_Sales_data(istream &is)
+{
+    read(is,*this);
 }
 
 ostream &print(ostream &os,const my_Sales_data &item)
@@ -62,12 +73,14 @@ my_Sales_data& my_Sales_data::combine(const my_Sales_data &rhs)
 
 int main()
 {
-    my_Sales_data total;
-    if (read(cin,total))
+    my_Sales_data total(cin);
+    if (!total.isbn().empty())//如果不为空
     {
-        my_Sales_data trans;
-        while (read(cin,trans))
+        while (cin)
         {
+            my_Sales_data trans(cin);
+            if(!cin)
+                break;
             if (total.isbn() == trans.isbn())
             {
                 total.combine(trans);
