@@ -12,4 +12,4 @@
 struct Person{
     std::string name;//姓名
     std::string addr;//地址
-}
+};
