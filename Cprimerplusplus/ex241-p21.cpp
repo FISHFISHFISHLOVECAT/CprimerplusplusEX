@@ -9,6 +9,8 @@
 #include <stdio.h>
 #include <iostream>
 using namespace std;
+struct my_Sales_data;
+istream &read(istream &is,my_Sales_data &item);
 
 struct my_Sales_data{
     //构造函数
@@ -16,7 +18,7 @@ struct my_Sales_data{
     my_Sales_data(const string &s1,const string &s2):bookNo(s1),country(s2){};
     my_Sales_data(const string &s1,const string &s2,unsigned n,double p):bookNo(s1),country(s2)
                   ,units_sold(n),revenue(n*p){};
-    my_Sales_data(istream &);
+    my_Sales_data(istream &is){read(is,*this);};
     
     //成员函数
     std::string isbn() const{return bookNo;};//这个函数的定义直接在大括号中
@@ -45,10 +47,6 @@ istream &read(istream &is,my_Sales_data &item)
     return is;
 }
 
-my_Sales_data::my_Sales_data(istream &is)
-{
-    read(is,*this);
-}
 
 ostream &print(ostream &os,const my_Sales_data &item)
 {
