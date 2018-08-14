@@ -13,13 +13,17 @@ using namespace std;
 struct Person;
 Person & read(istream &,Person& someone);
 
-struct Person{
+class Person{
+friend Person& read(istream &,Person &someone);
+public:
     Person()=default;
     Person(istream &is){read(is,*this);};
     Person(string &s1,string &s2):name(s1),addr(s2){}
-    
-    std::string return_name()const {return name;};
-    std::string return_addr()const {return addr;};
+    string return_name()const {return name;};
+    string return_addr()const {return addr;};
+private:
+    //std::string return_name()const {return name;};
+    //std::string return_addr()const {return addr;};
     std::string name="unknown";//姓名
     std::string addr="somewhere";//地址
 };
