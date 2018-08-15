@@ -36,7 +36,7 @@ private:
 };
 
 
-double my_Sales_data::avg_price()const{
+inline double my_Sales_data::avg_price()const{
     if(units_sold)
         return revenue/units_sold;//总收入除以卖出总数
     else
