@@ -10,21 +10,25 @@
 #include <iostream>
 using namespace std;
 struct my_Sales_data;
-istream &read(istream &is,my_Sales_data &item);
 
-struct my_Sales_data{
-    //构造函数
+class my_Sales_data{
+friend istream &read(istream &is,my_Sales_data &item);
+friend ostream &print(ostream &os,const my_Sales_data &item);
+friend istream &read(istream &is,my_Sales_data &item);
+    
+public:    //构造函数
     my_Sales_data()=default;//默认构造函数,将使用类内初值初始化数据成员
     my_Sales_data(const string &s1,const string &s2):bookNo(s1),country(s2){};
     my_Sales_data(const string &s1,const string &s2,unsigned n,double p):bookNo(s1),country(s2)
                   ,units_sold(n),revenue(n*p){};
     my_Sales_data(istream &is){read(is,*this);};
-    
-    //成员函数
     std::string isbn() const{return bookNo;};//这个函数的定义直接在大括号中
-    my_Sales_data & combine(const my_Sales_data &rhs);
-    double avg_price() const;
+    my_Sales_data& combine(const my_Sales_data &rhs);
+    my_Sales_data add(const my_Sales_data &lhs,const my_Sales_data &rhs);
+    double avg_price()const;
     //成员数据
+private:
+    
     std::string country;
     std::string bookNo;
     unsigned units_sold=0;
