@@ -1,16 +1,10 @@
-//
-//  Screen.h
-//  Cprimerplusplus
-//
-//  Created by junwuli on 2018/8/15.
-//  Copyright © 2018 GDUT. All rights reserved.
-//
+class Window_mgr;
+{
+    void clear();
+};//声明需要友员函数
 
-#ifndef Screen_h
-#define Screen_h
-#include <vector>
-#include <iostream>
 class Screen{
+    friend void Windows_mgr::clear();
 private:
     unsigned height=0,with=0;
     unsigned cursor=0;
@@ -19,6 +13,21 @@ public:
     Screen()=default;
     Screen(unsigned ht,unsigned wd):height(ht),width(wd),content(ht *wd,' '){}
     Screen(unsigned ht,unsigned wd,char c):height(ht),width(wd),content(ht * wd,c){}
+};//承认友员身份
+
+void Window_mgr::clear()
+{
+    Screen myScreen(10,20,'X');
+    cout<<"清理之前的内容是："<<endl;
+    cout<<myScreen.contents<<end;
+    myScreen.contents="";
+    cout<<"清理之后的内容是:"<<endl;
+    cout<<myScreen.contents<<end;
 }
 
-#endif /* Screen_h */
+int main()
+{
+    Windows_mgr w;
+    w.clear();
+    return 0;
+}
