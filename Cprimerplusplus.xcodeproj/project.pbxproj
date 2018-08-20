@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E1EC9A91211F4BDB007C89F3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1EC9A90211F4BDB007C89F3 /* main.cpp */; };
+		E1CAD135212AF4ED00855DF5 /* ex94.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1CAD134212AF4ED00855DF5 /* ex94.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +23,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E1CAD134212AF4ED00855DF5 /* ex94.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ex94.cpp; sourceTree = "<group>"; };
 		E1EC9A8D211F4BDB007C89F3 /* Cprimerplusplus */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Cprimerplusplus; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1EC9A90211F4BDB007C89F3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 		E1EC9A8F211F4BDB007C89F3 /* Cprimerplusplus */ = {
 			isa = PBXGroup;
 			children = (
-				E1EC9A90211F4BDB007C89F3 /* main.cpp */,
+				E1CAD134212AF4ED00855DF5 /* ex94.cpp */,
 			);
 			path = Cprimerplusplus;
 			sourceTree = "<group>";
@@ -118,7 +118,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1EC9A91211F4BDB007C89F3 /* main.cpp in Sources */,
+				E1CAD135212AF4ED00855DF5 /* ex94.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
