@@ -16,15 +16,11 @@ using namespace std;
 int main()
 {
     list<int>l1{1,3,21,11,3,40,25,46,447,18};
-    deque<int>odd;
-    deque<int>even;
+    deque<int>odd,even;
     
     for(auto iter=l1.begin();iter!=l1.end();iter++)
     {
-        if(*iter%2)
-            odd.push_back(*iter);
-        else
-            even.push_back(*iter);
+        (*iter&0x1?odd:even).push_back(*iter);
     }
     cout<<"ood:";
     for(auto iter=odd.begin();iter!=odd.end();iter++)
