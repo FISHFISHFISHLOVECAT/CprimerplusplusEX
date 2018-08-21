@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E1CAD13B212B06C600855DF5 /* ex914.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1CAD13A212B06C600855DF5 /* ex914.cpp */; };
+		E1CAD13D212B9D6100855DF5 /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1CAD13C212B9D6100855DF5 /* test.cpp */; };
+		E1CAD13F212BA02800855DF5 /* ex915.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1CAD13E212BA02800855DF5 /* ex915.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,7 +24,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E1CAD13A212B06C600855DF5 /* ex914.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ex914.cpp; sourceTree = "<group>"; };
+		E1CAD13C212B9D6100855DF5 /* test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
+		E1CAD13E212BA02800855DF5 /* ex915.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ex915.cpp; sourceTree = "<group>"; };
 		E1EC9A8D211F4BDB007C89F3 /* Cprimerplusplus */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Cprimerplusplus; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -41,7 +43,6 @@
 		E1EC9A84211F4BDB007C89F3 = {
 			isa = PBXGroup;
 			children = (
-				E1CAD13A212B06C600855DF5 /* ex914.cpp */,
 				E1EC9A8F211F4BDB007C89F3 /* Cprimerplusplus */,
 				E1EC9A8E211F4BDB007C89F3 /* Products */,
 			);
@@ -58,6 +59,8 @@
 		E1EC9A8F211F4BDB007C89F3 /* Cprimerplusplus */ = {
 			isa = PBXGroup;
 			children = (
+				E1CAD13C212B9D6100855DF5 /* test.cpp */,
+				E1CAD13E212BA02800855DF5 /* ex915.cpp */,
 			);
 			path = Cprimerplusplus;
 			sourceTree = "<group>";
@@ -118,7 +121,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1CAD13B212B06C600855DF5 /* ex914.cpp in Sources */,
+				E1CAD13F212BA02800855DF5 /* ex915.cpp in Sources */,
+				E1CAD13D212B9D6100855DF5 /* test.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
