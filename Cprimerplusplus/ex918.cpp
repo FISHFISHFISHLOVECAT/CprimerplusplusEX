@@ -10,12 +10,13 @@
 #include <vector>
 #include <iostream>
 #include <deque>
+#include <list>
 using namespace std;
 
 int main()
 {
     string str;
-    deque<string> dq;
+    list<string> dq;
     while(cin>>str)
     {
         dq.push_back(str);
