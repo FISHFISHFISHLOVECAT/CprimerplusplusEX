@@ -36,7 +36,7 @@ int main()
             curr++;
         }
     }
-    
+
     cout<<"forward_list:";
     for(auto i:flst)
     {
