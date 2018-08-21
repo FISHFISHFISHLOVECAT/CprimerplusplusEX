@@ -15,21 +15,23 @@ using namespace std;
 
 int main()
 {
-    list<int> vi{0,1,2,3,4,5,6,7,8,9};
-    auto iter=vi.begin();
-    while(iter!=vi.end())
+    forward_list<int> flt{0,1,2,3,4,5,6,7,8,9};
+    auto pre_flt=flt.before_begin(),cur_flt=flt.begin();
+    while(cur_flt!=flt.end())
     {
-        if(*iter&0x1)
+        if(*cur_flt&0x1)
         {
-            iter=vi.insert(iter,*iter);//复制当前元素
-            iter++;
-            iter++;
+            cur_flt=flt.insert_after(cur_flt,*cur_flt);//复制当前元素
+            pre_flt=cur_flt;
+            cur_flt++;
         }
         else
-            iter=vi.erase(iter);
+        {
+            cur_flt=flt.erase_after(pre_flt);
+        }
     }
     
-    for(auto i:vi)
+    for(auto i:flt)
         cout<<i<<" ";
     cout<<endl;
     return 0;
