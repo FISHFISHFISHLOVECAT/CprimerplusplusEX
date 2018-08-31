@@ -1,8 +1,8 @@
 //
-//  test.cpp
+//  ex103.cpp
 //  Cprimerplusplus
 //
-//  Created by junwuli on 2018/8/21.
+//  Created by junwuli on 2018/8/31.
 //  Copyright © 2018 GDUT. All rights reserved.
 //
 
@@ -12,19 +12,15 @@
 #include <iostream>
 #include <sstream>
 #include <algorithm>
+#include <numeric>
 #include <list>
 using namespace std;
 
 
 int main()
 {
-    list<string> str{"apple","cat","catcat","apple","apple"};
-    string tar{"apple"};
-    int times=0;
-    times=count(str.cbegin(),str.cend(),tar);
-    
-    cout<<tar<<"occurs "<<times<<"times"<<endl;
+    vector<int> vint{1,2,3,4,5};
+    cout<<accumulate(vint.begin(),vint.end(),0)<<endl;
     
     return 0;
 }
-
