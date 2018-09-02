@@ -1,5 +1,5 @@
 //
-//  ex1014.cpp
+//  ex1015.cpp
 //  Cprimerplusplus
 //
 //  Created by junwuli on 2018/9/2.
@@ -7,14 +7,14 @@
 //
 
 #include <stdio.h>
-#include <iostream>
-using namespace std;
-int sum(int a,int b){return a+b;};
+#include "publicHeader.h"
+
 
 int main()
 {
-    auto sum=[](int a,int b){return a+b;};
+    int b=5;
+    auto sum=[b](int a){return a+b;};
+    cout<<sum(88)<<endl;
     
-    cout<<sum(1,3)<<endl;
     return 0;
 }
