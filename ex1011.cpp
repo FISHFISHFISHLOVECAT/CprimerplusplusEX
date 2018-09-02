@@ -29,8 +29,9 @@ int main(int argc,char * argv[])
     while(read(in,sd))
         sds.push_back(sd);
     
-    sort(sds.begin(),sds.end(),compareIsbn);
-    
+    //sort(sds.begin(),sds.end(),compareIsbn);
+    sort(sds.begin(),sds.end(),
+         [](const my_Sales_data&lhs,const my_Sales_data&rhs){return lhs.isbn()<rhs.isbn();});
     for(const auto &s:sds)
     {
         print(cout, s);
@@ -39,7 +40,7 @@ int main(int argc,char * argv[])
     
     return 0;
 }
-bool compareIsbn(const my_Sales_data&lhs,const my_Sales_data&rhs)
-{
-    return lhs.isbn()<rhs.isbn();
-}
+//bool compareIsbn(const my_Sales_data&lhs,const my_Sales_data&rhs)
+//{
+//    return lhs.isbn()<rhs.isbn();
+//}
