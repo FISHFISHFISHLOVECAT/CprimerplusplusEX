@@ -10,48 +10,26 @@ using std::cin;
 using std::ifstream;
 using std::endl;
 
-
+bool lengthCompare(const string&,const string &);
+bool lengthCompare1(const string&,const string &,int a);
 int main()
 {
-    int i=0;
-    string filename("/Users/junwuli/Desktop/data");
-    ifstream ssin(filename);
-    vector<int> ivec;
-    while(ssin>>i)
-    {
-        ivec.push_back(i);
-    }
-    for(auto i:ivec)
-    {
-        cout<<i<<" ";
-    }
-    cout<<endl;
-    int j=1;
-    cout<<ivec[j]<<endl;
-    cout<<ivec[++j]<<endl;
+    bool (*pf)(const string&s1,const string &s2);
+    string s1{"app"};
+    string s2{"apple"};
+    pf=nullptr;
+    
+    cout<<pf(s1, s2)<<endl;
+    
+    //cout<<lengthCompare(s1, s2)<<endl;
     return 0;
 }
-//void ReadFileToVec(const string &filename,vector<string> &vec);
-//int main()
-//{
-//    vector<string> vec;
-//    string filename("/Users/junwuli/Desktop/data");
-//    ReadFileToVec(filename, vec);
-//
-//    return 0;
-//}
-//
-//void ReadFileToVec(const string &filename,vector<string> &vec)
-//{
-//    string buf;
-//    ifstream in(filename);
-//    if(in)
-//    {
-//        while(in>>buf)
-//            vec.push_back(buf);
-//    }
-//    for(const auto &i:vec)
-//    {
-//        cout<<i<<endl;
-//    }
-//}
+bool lengthCompare(const string&s1,const string &s2)
+{
+    return s1.size()>s2.size();
+}
+bool lengthCompare1(const string &s1,const string &s2,int a)
+{
+    cout<<a<<endl;
+    return s1.size()>s2.size();
+}
