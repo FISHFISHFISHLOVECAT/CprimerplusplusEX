@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E18F02F2213C09160046D301 /* ex1011.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E18F02F1213C09160046D301 /* ex1011.cpp */; };
+		E1F3BBA8213E72A00038E67D /* ex1021.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1F3BBA7213E72A00038E67D /* ex1021.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,9 +24,8 @@
 
 /* Begin PBXFileReference section */
 		E18F02EE213C012B0046D301 /* publicHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = publicHeader.h; sourceTree = "<group>"; };
-		E18F02F1213C09160046D301 /* ex1011.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ex1011.cpp; sourceTree = "<group>"; };
-		E18F02F3213C092F0046D301 /* my_Sales_data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = my_Sales_data.h; path = Cprimerplusplus/my_Sales_data.h; sourceTree = "<group>"; };
 		E1EC9A8D211F4BDB007C89F3 /* Cprimerplusplus */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Cprimerplusplus; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1F3BBA7213E72A00038E67D /* ex1021.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ex1021.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,8 +42,7 @@
 		E1EC9A84211F4BDB007C89F3 = {
 			isa = PBXGroup;
 			children = (
-				E18F02F3213C092F0046D301 /* my_Sales_data.h */,
-				E18F02F1213C09160046D301 /* ex1011.cpp */,
+				E1F3BBA7213E72A00038E67D /* ex1021.cpp */,
 				E18F02EE213C012B0046D301 /* publicHeader.h */,
 				E1EC9A8F211F4BDB007C89F3 /* Cprimerplusplus */,
 				E1EC9A8E211F4BDB007C89F3 /* Products */,
@@ -122,7 +120,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E18F02F2213C09160046D301 /* ex1011.cpp in Sources */,
+				E1F3BBA8213E72A00038E67D /* ex1021.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

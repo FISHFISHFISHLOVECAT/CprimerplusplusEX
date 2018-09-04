@@ -8,12 +8,17 @@
 
 #include <stdio.h>
 #include <algorithm>
+#include <numeric>
+#include <list>
 #include "publicHeader.h"
 
 void biggies(vector<string> &word, vector<string>::size_type sz);
 void elimDups(vector<string> words);
 
-
+bool fc(string &s)
+{
+    return s.size()==5;
+}
 int main()
 {
     string word;
@@ -22,8 +27,12 @@ int main()
     {
         words.push_back(word);
     }
-    
+
     biggies(words, 4);
+    vector<string> vec{"the","quick","red","jumps","over","the","slow","red","turtle"};
+
+    cout<<*find_if(vec.begin(),vec.end(),fc)<<endl;
+
     return 0;
 }
 
@@ -42,7 +51,8 @@ void biggies(vector<string> &words, vector<string>::size_type sz)
 {
     elimDups(words);
     stable_sort(words.begin(),words.end(),[](const string &a,const string &b){return a.size()<b.size();});
-    auto wc=find_if(words.begin(),words.end(),[sz](const string &a){return a.size()>=sz;});
+    //auto wc=find_if(words.begin(),words.end(),[sz](const string &a){return a.size()>=sz;});
+    auto wc=stable_partition(words.begin(),words.end(),[sz](const string &s){return s.size()<=sz;});
     auto count=words.end()-wc;
     cout<<count<<" "<<make_plural(count,"word","s")
     <<" of length "<<sz<<" or longer "<<endl;
