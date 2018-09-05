@@ -1,35 +1,33 @@
 #include <iostream>
 #include <fstream>
+#include <iterator>
+#include <algorithm>
+#include <numeric>
 #include <vector>
 #include <string>
+#include <map>
 
-using std::string;
-using std::vector;
-using std::cout;
-using std::cin;
-using std::ifstream;
-using std::endl;
+using namespace std;
 
-bool lengthCompare(const string&,const string &);
-bool lengthCompare1(const string&,const string &,int a);
 int main()
 {
-    bool (*pf)(const string&s1,const string &s2);
-    string s1{"app"};
-    string s2{"apple"};
-    pf=nullptr;
+//    map<string,size_t> word_count;
+//    string word;
+//    while(cin>>word)
+//        ++word_count[word];
+//    for(const auto &w:word_count)
+//        cout<<w.first<<" occurs "<<w.second<<
+//        ((w.second>1)?" times":" time")<<endl;
+    vector<int> ivec{1,2,4,5,6};
     
-    cout<<pf(s1, s2)<<endl;
+    for(auto it=ivec.begin();it!=ivec.end();it++)
+    {
+        *it*=2*(*it);
+        cout<<*it<<endl;
+    }
     
-    //cout<<lengthCompare(s1, s2)<<endl;
-    return 0;
+    for_each(ivec.begin(),ivec.end(),[] (int element)mutable{cout<<(element*=2)<<endl;});
+    
+    
 }
-bool lengthCompare(const string&s1,const string &s2)
-{
-    return s1.size()>s2.size();
-}
-bool lengthCompare1(const string &s1,const string &s2,int a)
-{
-    cout<<a<<endl;
-    return s1.size()>s2.size();
-}
+
