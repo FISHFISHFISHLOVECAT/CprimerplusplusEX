@@ -11,23 +11,35 @@ using namespace std;
 
 int main()
 {
-//    map<string,size_t> word_count;
-//    string word;
-//    while(cin>>word)
-//        ++word_count[word];
-//    for(const auto &w:word_count)
-//        cout<<w.first<<" occurs "<<w.second<<
-//        ((w.second>1)?" times":" time")<<endl;
-    vector<int> ivec{1,2,4,5,6};
-    
-    for(auto it=ivec.begin();it!=ivec.end();it++)
+
+    int temp;
+    int n;
+    vector<int> ivec;
+
+    cin>>n;
+
+    while(cin>>temp)
+        ivec.push_back(temp);
+
+    sort(ivec.begin(),ivec.end());
+
+    double mid;
+    int t=n%2;
+    if(t)//jishu
     {
-        *it*=2*(*it);
-        cout<<*it<<endl;
+        mid=static_cast<int>(ivec[(n-1)/2]);
     }
+    else//oushu
+    {
+        mid=(ivec[n/2-1]+ivec[n/2])/2.0;//防止隐式转换
+        if((static_cast<int>(ivec[n/2-1]+ivec[n/2])%2)==0)
+        {
+            mid=static_cast<int>((ivec[n/2-1]+ivec[n/2])/2);
+        }
+    }
+    cout<<mid<<endl;
     
-    for_each(ivec.begin(),ivec.end(),[] (int element)mutable{cout<<(element*=2)<<endl;});
-    
-    
+    return 0;
+   
 }
 
