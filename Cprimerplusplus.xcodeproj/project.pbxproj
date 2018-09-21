@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E1E432EC215260B00059EAF3 /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1E432EB215260B00059EAF3 /* test.cpp */; };
-		E1E432EE215492BE0059EAF3 /* ex126.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1E432ED215492BE0059EAF3 /* ex126.cpp */; };
+		E1E432F0215493650059EAF3 /* ex127.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1E432EF215493650059EAF3 /* ex127.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,8 +24,7 @@
 
 /* Begin PBXFileReference section */
 		E18F02EE213C012B0046D301 /* publicHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = publicHeader.h; sourceTree = "<group>"; };
-		E1E432EB215260B00059EAF3 /* test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
-		E1E432ED215492BE0059EAF3 /* ex126.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ex126.cpp; sourceTree = "<group>"; };
+		E1E432EF215493650059EAF3 /* ex127.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ex127.cpp; sourceTree = "<group>"; };
 		E1EC9A8D211F4BDB007C89F3 /* Cprimerplusplus */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Cprimerplusplus; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -44,9 +42,8 @@
 		E1EC9A84211F4BDB007C89F3 = {
 			isa = PBXGroup;
 			children = (
-				E1E432ED215492BE0059EAF3 /* ex126.cpp */,
+				E1E432EF215493650059EAF3 /* ex127.cpp */,
 				E18F02EE213C012B0046D301 /* publicHeader.h */,
-				E1E432EB215260B00059EAF3 /* test.cpp */,
 				E1EC9A8F211F4BDB007C89F3 /* Cprimerplusplus */,
 				E1EC9A8E211F4BDB007C89F3 /* Products */,
 			);
@@ -123,8 +120,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1E432EE215492BE0059EAF3 /* ex126.cpp in Sources */,
-				E1E432EC215260B00059EAF3 /* test.cpp in Sources */,
+				E1E432F0215493650059EAF3 /* ex127.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

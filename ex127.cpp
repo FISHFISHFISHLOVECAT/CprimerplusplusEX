@@ -1,5 +1,5 @@
 //
-//  ex126.cpp
+//  ex127.cpp
 //  Cprimerplusplus
 //
 //  Created by junwuli on 2018/9/21.
@@ -8,15 +8,15 @@
 
 #include <iostream>
 #include <vector>
+#include <memory>
 using namespace std;
 
-vector<int> * make_dynamically()
+auto make_dynamically()
 {
-    auto Ptr = new vector<int>{};
-    return Ptr;
+    return make_shared<vector<int>>();
 }
 
-auto populate(vector<int> * Ptr)
+auto populate(shared_ptr<vector<int>> Ptr)
 {
     int temp;
     while(cin>>temp)
@@ -25,7 +25,7 @@ auto populate(vector<int> * Ptr)
     return Ptr;
 }
 
-auto print(vector<int> * Ptr)->ostream &
+auto print(shared_ptr<vector<int>> Ptr)->ostream &
 {
     for(auto i:*Ptr)
         cout<<i<<" ";
@@ -36,9 +36,6 @@ int main()
 {
     auto vec = populate(make_dynamically());
     print(vec) << std::endl;
-    delete vec;
     
     return 0;
 }
-    
-        
