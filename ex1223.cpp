@@ -25,5 +25,3 @@ int main()
     delete [] r;
     
 }
-
-
